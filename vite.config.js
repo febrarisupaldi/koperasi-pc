@@ -19,7 +19,14 @@ export default defineConfig({
     },
     plugins: [
         laravel({
-            input: ["resources/css/app.css", "resources/js/app.js"],
+            input: [
+                "resources/sass/bootstrap.scss",
+                "resources/sass/themes/dark/app-dark.scss",
+                "resources/sass/app.scss",
+                "resources/sass/pages/auth.scss",
+                "resources/css/app.css",
+                "resources/js/app.js"
+            ],
             refresh: true,
         }),
     ],
