@@ -7,9 +7,9 @@
     <title>{{ $title }} - {{ config('app.name') }}</title>
 
     @vite([
-        "resources/sass/bootstrap.scss",
-        "resources/scss/themes/dark/app-dark.scss",
-        "resources/scss/pages.auth.scss"
+        "resources/sass/app.scss",
+        "resources/sass/themes/dark/app-dark.scss",
+        "resources/sass/pages/auth.scss"
     ])
     <link rel="shortcut icon" href="{{ asset('assets/static/images/logo/favicon.svg') }}" type="image/x-icon">
     <link rel="shortcut icon" href="{{ asset('assets/static/images/logo/favicon.png') }}" type="image/png">
