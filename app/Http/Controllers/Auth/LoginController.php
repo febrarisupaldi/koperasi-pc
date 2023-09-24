@@ -25,13 +25,15 @@ class LoginController extends Controller
     {
         $credentials = $request->validated();
 
-        if (!Auth::attempt($credentials, $request->boolean('remember'))) {
+        $attempt = Auth::attempt($credentials, $request->boolean('remember'));
+
+        if (!$attempt) {
             return redirect()->back()->with('error', 'incorrect username or password');
         }
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
+        // $request->session()->invalidate();
+        // $request->session()->regenerateToken();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->to(RouteServiceProvider::HOME);
     }
 
     /**
