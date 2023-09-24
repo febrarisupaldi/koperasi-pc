@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="form-check form-check-lg d-flex align-items-end">
-                        <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault" name="remember">
                         <label class="form-check-label text-gray-600" for="flexCheckDefault">
                             Keep me logged in
                         </label>
