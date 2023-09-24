@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <script src="{{ asset('assets/static/js/initTheme.js') }}"></script>
+    @vite('resources/js/initTheme.js')
     <div id="auth">
         {{ $slot }}
     </div>

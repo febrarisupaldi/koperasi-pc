@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth', 'prefix' => '/'], function() {
     Route::get('dashboard', function() {
         return view('dashboard');
-    });
+    })->name('dashboard');
 });
 
 require_once __DIR__ . "/auth.php";
