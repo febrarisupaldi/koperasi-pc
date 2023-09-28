@@ -21,6 +21,11 @@ Route::group(['middleware' => 'auth', 'prefix' => '/'], function() {
     Route::get('dashboard', function() {
         return view('dashboard');
     })->name('dashboard');
+    Route::group(['prefix' => 'component', 'as' => 'component.'], function() {
+        Route::get('accordion', function() {
+            return view('mazer.components.accordion');
+        })->name('accordion');
+    });
 });
 
 require_once __DIR__ . "/auth.php";
