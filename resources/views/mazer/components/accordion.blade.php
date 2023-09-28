@@ -30,7 +30,6 @@
                         </div>
                         <div class="card-body">
                             <p>Click the accordions below to expand/collapse the accordion content.</p>
-
                             <x-accordion id="accordionExample">
                                 <x-accordion.item id="collapseOne" parent="#accordionExample">
                                     <x-slot:header>
@@ -39,7 +38,7 @@
                                             aria-controls="collapseOne">
                                             Accordion Item #1
                                         </button>
-                                    </x-slot>
+                                    </x-slot:header>
 
                                     <strong>This is the first item's accordion body.</strong> It is shown by
                                     default, until the collapse plugin adds the appropriate classes that we use to
@@ -49,7 +48,9 @@
                                     any HTML can go within the <code>.accordion-body</code>, though the transition
                                     does limit overflow.
                                 </x-accordion.item>
+                            </x-accordion>
 
+                            <x-accordion id="accordionExample">
                                 <x-accordion.item id="collapseTwo" parent="#accordionExample">
                                     <x-slot:header>
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -57,7 +58,7 @@
                                             aria-controls="collapseTwo">
                                             Accordion Item #2
                                         </button>
-                                    </x-slot>
+                                    </x-slot:header>
 
                                     <strong>This is the second item's accordion body.</strong> It is hidden by
                                     default, until the collapse plugin adds the appropriate classes that we use to
@@ -67,7 +68,9 @@
                                     any HTML can go within the <code>.accordion-body</code>, though the transition
                                     does limit overflow.
                                 </x-accordion.item>
+                            </x-accordion>
 
+                            <x-accordion id="accordionExample">
                                 <x-accordion.item id="collapseThree" parent="#accordionExample" :show="true">
                                     <x-slot:header>
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -75,7 +78,7 @@
                                             aria-controls="collapseThree">
                                             Accordion Item #3
                                         </button>
-                                    </x-slot>
+                                    </x-slot:header>
 
                                     <strong>This is the third item's accordion body.</strong> It is hidden by
                                     default, until the collapse plugin adds the appropriate classes that we use to
@@ -108,7 +111,7 @@
                                             aria-expanded="false" aria-controls="flush-collapseOne">
                                             Accordion Item #1
                                         </button>
-                                    </x-slot>
+                                    </x-slot:header>
 
                                     Placeholder content for this accordion, which is
                                     intended to demonstrate the <code>.accordion-flush</code> class. This is the
@@ -122,7 +125,7 @@
                                             aria-expanded="false" aria-controls="flush-collapseTwo">
                                             Accordion Item #2
                                         </button>
-                                    </x-slot>
+                                    </x-slot:header>
 
                                     Placeholder content for this accordion, which is
                                     intended to demonstrate the <code>.accordion-flush</code> class. This is the
@@ -138,7 +141,7 @@
                                             aria-expanded="false" aria-controls="flush-collapseThree">
                                             Accordion Item #3
                                         </button>
-                                    </x-slot>
+                                    </x-slot:header>
 
                                     Placeholder content for this accordion, which is
                                     intended to demonstrate the <code>.accordion-flush</code> class. This is the
